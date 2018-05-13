@@ -1,0 +1,278 @@
+/* Web Fonts -------------------- */
+
+@font-face {
+  font-family: 'Abolition Regular';
+    src: url('../fonts/abolition-regular-webfont.eot');
+    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abolition-regular-webfont.woff') format('woff'),
+         url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 3rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 5px  8px 10px #222;
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: #92c4ee;   /*rgb(255, 169, 73);*/
+  text-decoration: none;
+}
+
+a:visited {
+  color: #c5e1f9;
+}
+
+a:hover {
+  color: #c4e4ff;
+}
+
+a:active {
+  color: #c4e4ff;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 250px;
+  height: 850px;
+  background: linear-gradient(#232526, transparent 90%),
+              linear-gradient(0deg, #fff, transparent 90%),
+              #ffa949 url('../img/cityscapecomp.jpg') no-repeat center;
+  background-size: cover;
+  text-shadow: 0 1px 1 rgba(0, 0, 0, .8);
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  padding-top: 150px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #92c4ee;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.wildlife {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 10px solid #92c4ee;
+  margin: 105px 0 60px;
+  background: #434a52 url('../img/bear.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: 0px 15px 10px -12px rgba(0,0,0, .8);
+  border-radius: 10px;
+}
+
+.arrow {
+  width: 50px;
+  margin-top: 150px;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+/* Floated Columns ------------------ */
+
+.lodging,
+.food {
+  width: 46.5%;
+}
+
+.food {
+  float: left;
+}
+
+.lodging {
+  float: right;
+}
+
+.lodging img {
+  height: 305px;
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#night {
+  height: 305px;
+}
+
+
+
+/* Media Queries -------------------- */
+
+@media (max-width: 1024px) {
+
+    .primary-content,
+    .secondary-content {
+    
+    width: 90%;
+  }
+
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+    .primary-content,
+    .secondary-content {
+    
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+
+  .main-header {
+  
+    max-height: 1rem;
+    /*padding 30px;*/
+  }
+
+  .title {
+    font-size: 1rem;
+    border: none;
+  }
+
+  h1 {
+
+    font-size: 1rem;
+    margin-top: -150px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .lodging,
+  .food {
+    float: none;
+    width: 100%;
+  }
+
+  .main-footer {
+    padding: 20px 0;
+  }
+
+}
+
+
+
+
